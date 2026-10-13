@@ -1,0 +1,10 @@
+name: web
+on:
+  pull_request:
+    paths: ["web/**"]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: test -s web/index.html
